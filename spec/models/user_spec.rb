@@ -11,6 +11,8 @@ RSpec.describe User, type: :model do
   end
 
   it "has a current_cart" do
+    binding.pry
+    
     @user.current_cart = @user.carts.create
     expect(@user.current_cart).to be_a(Cart)
   end
